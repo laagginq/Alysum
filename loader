@@ -1,7 +1,7 @@
-if _G.hvhLoaded then 
+if _G.alysumloaded then 
 	return
 else
-	_G.hvhLoaded = true
+	_G.alysumloaded = true
 end
 
 if not isfolder("alysum") then 
@@ -12,90 +12,184 @@ if not isfile("alysum/key.txt") then
 	writefile("alysum/key.txt","")
 end
 
-local Login = Instance.new("ScreenGui")
-local Holder = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
+local cam = workspace.CurrentCamera
+local x = cam.ViewportSize.X
+local y = cam.ViewportSize.Y
+local newx = math.floor(x * 0.5)
+local newy = math.floor(y * 0.5)
+
+local Selected = "Main"
+
+local AlysumLoader = Instance.new("ScreenGui")
+local Alysum = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local VersionSelect = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local Main_Script = Instance.new("TextButton")
+local Streamable_Script = Instance.new("TextButton")
 local KeyInput = Instance.new("Frame")
-local Input = Instance.new("TextBox")
-local Login_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local KeyInputField = Instance.new("TextBox")
+local LoadScriptButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
 
-Login.Name = "Login"
-Login.Parent = game.CoreGui
-Login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local bordercolor = Color3.fromRGB(111, 50, 168)
 
-Holder.Name = "Holder"
-Holder.Parent = Login
-Holder.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-Holder.BorderColor3 = Color3.fromRGB(111, 50, 168)
-Holder.Position = UDim2.new(0.344531238, 0, 0.346367627, 0)
-Holder.Size = UDim2.new(0, 366, 0, 118)
-Holder.Active = true
-Holder.Draggable = true
+local uistroke1 = Instance.new("UIStroke",Alysum)
+uistroke1.Color = bordercolor
 
-Title.Name = "Title"
-Title.Parent = Holder
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Size = UDim2.new(0, 367, 0, 27)
-Title.Font = Enum.Font.Code
-Title.Text = " Alysum | Login"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 14.000
-Title.TextXAlignment = Enum.TextXAlignment.Left
+local uistroke12 = Instance.new("UIStroke",KeyInput)
+uistroke12.Color = bordercolor
 
-Close.Name = "Close"
-Close.Parent = Holder
-Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close.BackgroundTransparency = 1.000
-Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.925545454, 0, 0, 0)
-Close.Size = UDim2.new(0, 27, 0, 27)
-Close.Font = Enum.Font.Ubuntu
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(255, 255, 255)
-Close.TextSize = 20.000
+local uistroke13 = Instance.new("UIStroke",VersionSelect)
+uistroke13.Color = bordercolor
+
+local uistroke132 = Instance.new("UIStroke",LoadScriptButton)
+uistroke132.Color = bordercolor
+uistroke132.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+AlysumLoader.Name = "AlysumLoader"
+AlysumLoader.Parent = game.CoreGui
+AlysumLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Alysum.Name = "Alysum"
+Alysum.Parent = AlysumLoader
+Alysum.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Alysum.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Alysum.BorderSizePixel = 0
+Alysum.AnchorPoint = Vector2.new(0.5,0.5)
+Alysum.Position = UDim2.new(0, newx, 0, newy)
+Alysum.Size = UDim2.new(0, 319, 0, 280)
+
+
+ImageLabel.Parent = Alysum
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.341692775, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 91, 0, 91)
+ImageLabel.Image = "rbxassetid://17059497526"
+
+UICorner.Parent = Alysum
+
+VersionSelect.Name = "VersionSelect"
+VersionSelect.Parent = Alysum
+VersionSelect.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VersionSelect.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VersionSelect.BorderSizePixel = 0
+VersionSelect.Position = UDim2.new(0.0940438882, 0, 0.324924469, 0)
+VersionSelect.Size = UDim2.new(0, 259, 0, 91)
+VersionSelect.ZIndex = 5
+
+UICorner_2.Parent = VersionSelect
+
+UIListLayout.Parent = VersionSelect
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Main_Script.Name = "Main_Script"
+Main_Script.Parent = VersionSelect
+Main_Script.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_Script.BackgroundTransparency = 1.000
+Main_Script.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main_Script.BorderSizePixel = 0
+Main_Script.Size = UDim2.new(0, 259, 0, 20)
+Main_Script.Font = Enum.Font.Code
+Main_Script.Text = "Main"
+Main_Script.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main_Script.TextSize = 14.000
+
+Streamable_Script.Name = "Streamable_Script"
+Streamable_Script.Parent = VersionSelect
+Streamable_Script.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Streamable_Script.BackgroundTransparency = 1.000
+Streamable_Script.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Streamable_Script.BorderSizePixel = 0
+Streamable_Script.Position = UDim2.new(0, 0, 0.197115391, 0)
+Streamable_Script.Size = UDim2.new(0, 259, 0, 20)
+Streamable_Script.Font = Enum.Font.Code
+Streamable_Script.Text = "Streamable"
+Streamable_Script.TextColor3 = Color3.fromRGB(255, 255, 255)
+Streamable_Script.TextSize = 14.000
+Streamable_Script.TextTransparency = 0.500
+
+Main_Script.MouseButton1Click:Connect(function()
+	Selected = "Main"
+	Main_Script.TextTransparency = 0
+	Streamable_Script.TextTransparency = 0.5
+end)
+
+Streamable_Script.MouseButton1Click:Connect(function()
+	Selected = "Streamable"
+	Main_Script.TextTransparency = 0.5
+	Streamable_Script.TextTransparency = 0
+end)
+
 
 KeyInput.Name = "KeyInput"
-KeyInput.Parent = Holder
-KeyInput.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-KeyInput.BorderColor3 = Color3.fromRGB(111, 50, 168)
-KeyInput.Position = UDim2.new(0.0983606577, 0, 0.246289268, 0)
-KeyInput.Size = UDim2.new(0, 294, 0, 23)
+KeyInput.Parent = Alysum
+KeyInput.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+KeyInput.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyInput.BorderSizePixel = 0
+KeyInput.Position = UDim2.new(0.0940438882, 0, 0.693763494, 0)
+KeyInput.Size = UDim2.new(0, 259, 0, 29)
+KeyInput.ZIndex = 3
 
-Input.Name = "Input"
-Input.Parent = KeyInput
-Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Input.BackgroundTransparency = 1.000
-Input.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Input.BorderSizePixel = 0
-Input.Position = UDim2.new(0.0238095243, 0, 0, 0)
-Input.Size = UDim2.new(0, 287, 0, 23)
-Input.Font = Enum.Font.Code
-Input.PlaceholderText = "Enter key here..."
-Input.Text = readfile("alysum/key.txt")
-Input.TextColor3 = Color3.fromRGB(255, 255, 255)
-Input.TextSize = 14.000
-Input.TextXAlignment = Enum.TextXAlignment.Left
+UICorner_3.Parent = KeyInput
 
-Login_2.Name = "Login"
-Login_2.Parent = Holder
-Login_2.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-Login_2.BorderColor3 = Color3.fromRGB(111, 50, 168)
-Login_2.Position = UDim2.new(0.0983606577, 0, 0.542372882, 0)
-Login_2.Size = UDim2.new(0, 294, 0, 23)
-Login_2.Font = Enum.Font.Code
-Login_2.Text = "Login"
-Login_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Login_2.TextSize = 14.000
+KeyInputField.Name = "KeyInputField"
+KeyInputField.Parent = KeyInput
+KeyInputField.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyInputField.BackgroundTransparency = 1.000
+KeyInputField.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyInputField.BorderSizePixel = 0
+KeyInputField.Position = UDim2.new(0.0347490348, 0, 0, 0)
+KeyInputField.Size = UDim2.new(0, 250, 0, 29)
+KeyInputField.Font = Enum.Font.Code
+KeyInputField.PlaceholderText = "Input your key here."
+KeyInputField.Text = readfile("alysum/key.txt")
+KeyInputField.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyInputField.TextSize = 14.000
+KeyInputField.TextXAlignment = Enum.TextXAlignment.Left
 
-Login_2.MouseButton1Click:Connect(function()
-	Login:Destroy()
-	local key = tostring(Input.Text)
+LoadScriptButton.Name = "LoadScriptButton"
+LoadScriptButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadScriptButton.BackgroundTransparency = 1.000
+LoadScriptButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadScriptButton.BorderSizePixel = 0
+LoadScriptButton.Position = UDim2.new(0.0940438882, 0, 0.846428573, 0)
+LoadScriptButton.Size = UDim2.new(0, 259, 0, 29)
+LoadScriptButton.Font = Enum.Font.Code
+LoadScriptButton.Text = "Load Alysum"
+LoadScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadScriptButton.TextSize = 14.000
+LoadScriptButton.ZIndex = 2
+
+UIListLayout_2.Parent = Alysum
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 8)
+
+UICorner_4.Parent = LoadScriptButton
+
+wait()
+
+
+LoadScriptButton.Parent = Alysum
+
+
+LoadScriptButton.MouseButton1Click:Connect(function()
+	AlysumLoader:Destroy()
+	local key = tostring(KeyInputField.Text)
 	writefile("alysum/key.txt",key)
 	script_key = key;
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/hvh/main/src.lua"))()
+	if Selected == "Main" then
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6efdd1716ddaa94bba587a7588da7b.lua"))()
+	else
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ff57456e47334c7e6a32a553537627bd.lua"))()
+	end
+	
 end)
