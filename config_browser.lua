@@ -119,7 +119,7 @@ function Loader:Create(enabled)
 		LoadButton.Position = UDim2.new(0.85781312, 0, 0, 0)
 		LoadButton.Size = UDim2.new(0, 43, 0, 27)
 		LoadButton.Font = Enum.Font.Code
-		LoadButton.Text = "Load"
+		LoadButton.Text = "View"
 		LoadButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		LoadButton.TextSize = 14.000
 		LoadButton.TextStrokeTransparency = 0.000
