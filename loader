@@ -116,6 +116,7 @@ Streamable_Script.TextColor3 = Color3.fromRGB(255, 255, 255)
 Streamable_Script.TextSize = 14.000
 Streamable_Script.TextTransparency = 0.500
 
+
 Main_Script.MouseButton1Click:Connect(function()
 	Selected = "Main"
 	Main_Script.TextTransparency = 0
@@ -150,7 +151,7 @@ KeyInputField.Position = UDim2.new(0.0347490348, 0, 0, 0)
 KeyInputField.Size = UDim2.new(0, 250, 0, 29)
 KeyInputField.Font = Enum.Font.Code
 KeyInputField.PlaceholderText = "Input your key here."
-KeyInputField.Text = readfile("alysum/key.txt")
+KeyInputField.Text = isfile("alysum/key.txt") and readfile("alysum/key.txt") or ""
 KeyInputField.TextColor3 = Color3.fromRGB(255, 255, 255)
 KeyInputField.TextSize = 14.000
 KeyInputField.TextXAlignment = Enum.TextXAlignment.Left
@@ -187,9 +188,8 @@ LoadScriptButton.MouseButton1Click:Connect(function()
 	writefile("alysum/key.txt",key)
 	script_key = key;
 	if Selected == "Main" then
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()
-	else
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6efdd1716ddaa94bba587a7588da7b.lua"))()
+	elseif Selected == "Streamable" then
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ff57456e47334c7e6a32a553537627bd.lua"))()
 	end
-	
 end)
