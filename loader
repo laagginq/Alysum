@@ -116,15 +116,39 @@ Streamable_Script.TextColor3 = Color3.fromRGB(255, 255, 255)
 Streamable_Script.TextSize = 14.000
 Streamable_Script.TextTransparency = 0.500
 
+local SolaraEdition = Instance.new("TextButton")
+
+SolaraEdition.Name = "SolaraEdition"
+SolaraEdition.Parent = VersionSelect
+SolaraEdition.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SolaraEdition.BackgroundTransparency = 1.000
+SolaraEdition.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SolaraEdition.BorderSizePixel = 0
+SolaraEdition.Position = UDim2.new(0, 0, 0.197115391, 0)
+SolaraEdition.Size = UDim2.new(0, 259, 0, 20)
+SolaraEdition.Font = Enum.Font.Code
+SolaraEdition.Text = "Solara"
+SolaraEdition.TextColor3 = Color3.fromRGB(255, 255, 255)
+SolaraEdition.TextSize = 14.000
+SolaraEdition.TextTransparency = 0.500
+
+SolaraEdition.MouseButton1Click:Connect(function()
+	Selected = "Solara"
+	SolaraEdition.TextTransparency = 0
+	Main_Script.TextTransparency = 0.5
+	Streamable_Script.TextTransparency = 0.5
+end)
 
 Main_Script.MouseButton1Click:Connect(function()
 	Selected = "Main"
+	SolaraEdition.TextTransparency = 0.5
 	Main_Script.TextTransparency = 0
 	Streamable_Script.TextTransparency = 0.5
 end)
 
 Streamable_Script.MouseButton1Click:Connect(function()
 	Selected = "Streamable"
+	SolaraEdition.TextTransparency = 0.5
 	Main_Script.TextTransparency = 0.5
 	Streamable_Script.TextTransparency = 0
 end)
@@ -191,5 +215,7 @@ LoadScriptButton.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6efdd1716ddaa94bba587a7588da7b.lua"))()
 	elseif Selected == "Streamable" then
 		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ff57456e47334c7e6a32a553537627bd.lua"))()
+	elseif Selected == "Solara" then
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
 	end
 end)
