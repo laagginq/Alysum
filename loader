@@ -212,9 +212,9 @@ LoadScriptButton.MouseButton1Click:Connect(function()
 	writefile("alysum/key.txt",key)
 	script_key = key;
 	if Selected == "Main" then
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6efdd1716ddaa94bba587a7588da7b.lua"))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()
 	elseif Selected == "Streamable" then
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ff57456e47334c7e6a32a553537627bd.lua"))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()
 	elseif Selected == "Solara" then
 		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
 	end
