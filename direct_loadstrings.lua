@@ -8,13 +8,13 @@
             loadstring(game:HttpGet("BLAH BLAH"))()
 ]]
 
--- Main
+-- Main (PAID)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()
 
--- Streamable 
+-- Streamable (PAID)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()
 
--- Solara
+-- Solara (PAID)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
 
 -- Mobile (FREE)
