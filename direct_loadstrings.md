@@ -44,3 +44,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/Alysum/main/
 ```lua
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/331516c9f626f525655e26f87ebc0153.lua"))()
 ```
+
+https://discord.gg/rbxfanclub
+https://alysum.pro/
