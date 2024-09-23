@@ -17,8 +17,8 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83b
 -- Solara
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
 
--- Mobile 
+-- Mobile (FREE)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/24d045871c488464c0c15c2f0b2435b5.lua"))()
 
--- Anti Lock GUI
+-- Anti Lock GUI (FREE)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/331516c9f626f525655e26f87ebc0153.lua"))()
