@@ -1,25 +1,20 @@
 ## Alysum Direct Loadstrings
 
-
-**You must add the script_key="PASTE_KEY"; part before the loadstring**
-Example: 
-```lua
-script_key="PASTE_KEY";
-loadstring(game:HttpGet("BLAH BLAH"))()
-```
-
 ## Main (PAID)
 ```lua
+script_key="PASTE_KEY";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()
 ```
 
 ## Streamable (PAID)
 ```lua
+script_key="PASTE_KEY";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()
 ```
 
 ## Solara (PAID)
 ```lua
+script_key="PASTE_KEY";
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
 ```
 
