@@ -1,12 +1,12 @@
 ## Alysum Direct Loadstrings
 
 
-    **You must add the script_key="PASTE_KEY"; part before the loadstring**
-        Example: 
-            ```lua
-            script_key="PASTE_KEY";
-            loadstring(game:HttpGet("BLAH BLAH"))()
-            ```
+**You must add the script_key="PASTE_KEY"; part before the loadstring**
+Example: 
+```lua
+script_key="PASTE_KEY";
+loadstring(game:HttpGet("BLAH BLAH"))()
+```
 
 ## Main (PAID)
 ```lua
