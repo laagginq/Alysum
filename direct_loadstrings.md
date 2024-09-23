@@ -5,19 +5,23 @@
         Example: 
             ```lua
             script_key="PASTE_KEY";
-            loadstring(game:HttpGet("BLAH BLAH"))()```
+            loadstring(game:HttpGet("BLAH BLAH"))()
+            ```
 
 ## Main (PAID)
 ```lua
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()```
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2cb68af157ca24ff8de44ddc6c830f93.lua"))()
+```
 
 ## Streamable (PAID)
 ```lua
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()```
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b432b5193c83baf427c3ef25794a7cb.lua"))()
+```
 
 ## Solara (PAID)
 ```lua
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()```
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7b556786ae40eaf682115fc59fecc45.lua"))()
+```
 
 ## Mobile (FREE)
 ```lua
@@ -38,8 +42,10 @@ getgenv().AlysumMobile = {
     fov = {true,50} -- // Visible, Size
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/Alysum/main/mobile"))()```
+loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/Alysum/main/mobile"))()
+```
 
 ## Anti Lock GUI (FREE)
 ```lua
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/331516c9f626f525655e26f87ebc0153.lua"))()```
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/331516c9f626f525655e26f87ebc0153.lua"))()
+```
